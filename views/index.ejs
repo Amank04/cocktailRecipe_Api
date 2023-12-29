@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cocktail Recipe</title>
+</head>
+<body>
+    <header>
+        <h1>Cocktail Recipe</h1>
+    </header>
+
+    <section class="recipe">
+        <img src=<%-imageURl %> alt="Cocktail Image">
+        <h2>
+            <%-drinkName %>
+        </h2>
+        <p class="ingredients">Ingredients:</p>
+        <ul>
+            <% for(let i = 0;i<ingredients.length;i++) { %>
+            <li>
+                <%- ingredients[i] %>
+            </li>
+            <% } %>
+        </ul>
+        <p class="instructions">Instructions:</p>
+        <p>
+            <%-instructions %>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Cocktail Recipe Website</p>
+    </footer>
+</body>
+</html>
